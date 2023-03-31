@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --bgc: hsl(60, 33%, 90%);
+  --todoContainer: hsl(41, 30%, 70%);
+  --text: hsl(29, 59%, 19%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bgc);
+  color: var(--text);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-block: 3rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+
+#task-input {
+  color: var(--text);
+  font-size: 1.5rem;
+  width: 40rem;
+  height: 3.5rem;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  padding-left: 1rem;
+  outline-color: var(--todoContainer);
+}
+
+#task-input::placeholder {
+  color: var(--todoContainer);
+}
+
+.btn {
+  background-color: var(--text);
+  color: var(--bgc);
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.add {
+  font-size: 1.5rem;
+  width: 7.5rem;
+  height: 3.5rem;
+  margin-left: 0.3rem;
+}
+
+.empty {
+  font-size: 1.25rem;
+  width: 6.5rem;
+  height: 3rem;
+}
+
+small {
+  margin-top: 0.5rem;
+}
+
+.todo-container {
+  background-color: var(--todoContainer);
+  font-size: 1.5rem;
+  width: 60rem;
+  min-height: 20rem;
+  margin-block: 2.5rem;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+}
+
+li {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-bottom: 1rem;
+  border-bottom: 4px solid var(--bgc);
+  border-radius: 2px;
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+.read-mode > input {
+  display: none;
+}
+
+.read-mode > span {
+  display: block;
+  margin: 0 auto 0 0;
+}
+
+.del,
+.edit {
+  font-size: 1.2rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  margin-inline: 0.25rem 1rem;
+}
+
+.edit-mode > input {
+  background-color: var(--bgc);
+  color: var(--text);
+  display: block;
+  font-size: 1.25rem;
+  margin: 0 auto 0 0;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  outline-color: var(--text);
+  outline-style: double;
+}
+
+.edit-mode > span {
+  display: none;
+}
+
+.go-to-top {
+  background-color: var(--text);
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -3rem;
+  margin-right: 2rem;
+  font-size: 3rem;
+  animation: myanimaton 2s infinite;
+}
+
+.go-to-top a {
+  color: var(--bgc);
+}
+
+@keyframes myanimaton {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
